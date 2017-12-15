@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+</head>
+<body>
+
+<form name="calc">
+
+    <div id="calculator">
+        <h1>Calculator</h1>
+
+        <input name="screen" id="screen">
+
+        <div class="keys">
+            <input type="button" name="btn1" value="1" onclick="addnumber(btn1.value)">
+            <input type="button" name="btn2" value="2" onclick="addnumber(btn2.value)">
+            <input type="button" name="btn3" value="3" onclick="addnumber(btn3.value)">
+            <input type="button" name="btnplus" value="+" onclick="addnumber(btnplus.value)"><br/>
+            <input type="button" name="btn4" value="4" onclick="addnumber(btn4.value)">
+            <input type="button" name="btn5" value="5" onclick="addnumber(btn5.value)">
+            <input type="button" name="btn6" value="6" onclick="addnumber(btn6.value)">
+            <input type="button" name="btnsub" value="-" onclick="addnumber(btnsub.value)"><br/>
+            <input type="button" name="btn7" value="7" onclick="addnumber(btn7.value)">
+            <input type="button" name="btn8" value="8" onclick="addnumber(btn8.value)">
+            <input type="button" name="btn9" value="9" onclick="addnumber(btn9.value)">
+            <input type="button" name="btnmul" value="*" onclick="addnumber(btnmul.value)"><br/>
+            <input type="button" name="btn0" value="0" onclick="addnumber(btn0.value)">
+            <input type="button" name="btndiv" value="/" onclick="addnumber(btndiv.value)">
+            <input type="button" name="btnclear" value="C" onclick="clearbutton()">
+            <input type="button" name="btnequ" value="=" id="btnequ"><br/>
+        </div>
+    </div>
+</form>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous" >
+
+</script>
+
+<script>
+    function addnumber(n) {
+        $('#screen').val($('#screen').val()+ n);
+    }
+
+    function clearbutton() {
+        document.calc.screen.value = "";
+    }
+
+    $('#btnequ').on('click', function () {
+        document.calc.screen.value = eval(document.calc.screen.value);
+    });
+
+
+</script>
+
+</body>
+</html>

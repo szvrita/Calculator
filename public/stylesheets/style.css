@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#calculator{
+  border: solid;
+  width: 500px;
+  height: auto;
+  text-align: center;
+}
+
+#screen{
+  border: 1px solid black;
+  width: 470px;
+  height: 50px;
+  margin: 10px;
+  font-size: 30px;
+  text-align: right;
+  padding: 3px;
+}
+.keys input{
+  width: 80px;
+  height: 80px;
+  margin: 10px 20px;
+  font-size: 30px;
+}
